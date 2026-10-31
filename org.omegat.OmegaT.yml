@@ -21,8 +21,8 @@ modules:
   - name: omegat-nojre
     sources:
       - type: archive
-        url: https://ixpeering.dl.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%206.0.1/OmegaT_6.0.1_Without_JRE.zip
-        sha256: 463e746f34fc93bf8659bd29fe66becf2f8fce417bb41ea25781785150089898
+        url: https://master.dl.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%206.1.0/OmegaT_6.1.0_Without_JRE.zip
+        sha1: 121290d6fd8bcd82945b9eaffb3863ef5fe3cd29
         dest: omegatpkg
     buildsystem: simple
     build-commands:
