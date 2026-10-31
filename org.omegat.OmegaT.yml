@@ -21,8 +21,8 @@ modules:
   - name: omegat-nojre
     sources:
       - type: archive
-        url: https://master.dl.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%206.1.0/OmegaT_6.1.0_Without_JRE.zip
-        sha1: 121290d6fd8bcd82945b9eaffb3863ef5fe3cd29
+        url: https://master.dl.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Without_JRE.zip
+        sha256: 6a99d1f86787b3ec92011b47d8bbd847d85f46ece70b4c6aad637c58eb6af6e9
         dest: omegatpkg
     buildsystem: simple
     build-commands:
@@ -35,7 +35,7 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
-          - export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel ${_JAVA_OPTIONS}"
+          - export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -D${_JAVA_OPTIONS}"
           - export PATH=$PATH:/app/jre/bin/
           - exec /app/share/omegat/OmegaT --config-dir="$XDG_CONFIG_HOME" ${OMEGAT_OPTIONS} $@
     build-commands:
